@@ -1,9 +1,9 @@
 {
   "app-id": "de.lernsoftware_filius.Filius",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "22.08",
   "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": ["org.freedesktop.Sdk.Extension.openjdk11"],
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.openjdk17"],
   "command": "de.lernsoftware_filius.Filius",
   "finish-args": [
     "--env=PATH=/app/jre/bin:/usr/bin:/app/bin",
@@ -18,7 +18,7 @@
     {
       "name": "openjdk",
       "buildsystem": "simple",
-      "build-commands": ["/usr/lib/sdk/openjdk11/install.sh"]
+      "build-commands": ["/usr/lib/sdk/openjdk17/install.sh"]
     },
     {
       "name": "filius",
@@ -31,8 +31,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.lernsoftware-filius.de/downloads/Setup/filius-1.14.1.zip",
-          "sha256": "eff56eff7f2ecc714bcbb7f894a9514217496d12449ee095eee81fc9469f51cf",
+          "url": "https://www.lernsoftware-filius.de/downloads/Setup/filius-2.5.1.zip",
+          "sha256": "b09c6b676a7e5818fdaf2e19cf107ba85e33d26cc7ec80cf10536b6aa2734b42",
           "strip-components": 0
         }
       ]
