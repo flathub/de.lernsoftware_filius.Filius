@@ -7,19 +7,24 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
   <url type="homepage">https://www.lernsoftware-filius.de</url>
-  <description><p>Filius is a network simulator for educational purpose.</p></description>
+  <description>
+    <p>Filius is a network simulator for educational purpose.</p>
+  </description>
   <screenshots>
     <screenshot type="default">
       <caption>Network</caption>
-      <image>https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/02.png</image>
+      <image>
+        https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/02.png</image>
     </screenshot>
     <screenshot>
       <caption>Main Window</caption>
-      <image>https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/01.png</image>
+      <image>
+        https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/01.png</image>
     </screenshot>
     <screenshot>
       <caption>Application Installer</caption>
-      <image>https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/03.png</image>
+      <image>
+        https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/03.png</image>
     </screenshot>
   </screenshots>
   <categories>
@@ -30,12 +35,13 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
-    <release date="2025-05-18" version="2.9.1"/>
-    <release date="2024-11-30" version="2.7.1"/>
-    <release date="2023-10-23" version="2.5.1"/>
-    <release date="2022-05-29" version="1.14.1"/>
-    <release date="2021-12-12" version="1.13.1"/>
-    <release date="2021-05-01" version="1.12"/>
+    <release date="2025-07-20" version="2.9.4" />
+    <release date="2025-05-18" version="2.9.1" />
+    <release date="2024-11-30" version="2.7.1" />
+    <release date="2023-10-23" version="2.5.1" />
+    <release date="2022-05-29" version="1.14.1" />
+    <release date="2021-12-12" version="1.13.1" />
+    <release date="2021-05-01" version="1.12" />
   </releases>
   <update_contact>mike@barkmin.eu</update_contact>
   <content_rating type="oars-1.1"></content_rating>
