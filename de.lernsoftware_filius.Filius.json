@@ -35,8 +35,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.lernsoftware-filius.de/downloads/Setup/filius-2.9.1.zip",
-          "sha256": "20ef5a1b1cedb564e4289e4372aeca429bf0a0523be3077e26a6394cdf8f128b",
+          "url": "https://www.lernsoftware-filius.de/downloads/Setup/filius-2.9.4.zip",
+          "sha256": "22702d82d8b5a3b5af12969662b59e1a6d817d356afb5c04b5eb90fa0a2d6364",
           "strip-components": 0
         }
       ]
