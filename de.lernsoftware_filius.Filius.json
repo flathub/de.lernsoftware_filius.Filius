@@ -1,97 +1,68 @@
 {
-  "app-id": "de.lernsoftware_filius.Filius",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
-  "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.openjdk21"
-  ],
-  "command": "de.lernsoftware_filius.Filius",
-  "finish-args": [
-    "--env=PATH=/app/jre/bin:/usr/bin:/app/bin",
-    "--share=network",
-    "--socket=x11",
-    "--share=ipc",
-    "--device=dri",
-    "--socket=pulseaudio",
-    "--filesystem=host"
-  ],
-  "modules": [
-    {
-      "name": "openjdk",
-      "buildsystem": "simple",
-      "build-commands": [
-        "/usr/lib/sdk/openjdk21/install.sh"
-      ]
-    },
-    {
-      "name": "filius",
-      "buildsystem": "simple",
-      "build-commands": [
-        "mkdir -p /app/filius",
-        "cp -r * /app/filius",
-        "chmod +x /app/filius/filius.sh"
-      ],
-      "sources": [
+    "app-id": "de.lernsoftware_filius.Filius",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "26.08",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.openjdk21"
+    ],
+    "command": "de.lernsoftware_filius.Filius",
+    "rename-icon": "filius",
+    "finish-args": [
+        "--env=PATH=/app/jre/bin:/usr/bin:/app/bin",
+        "--share=network",
+        "--socket=x11",
+        "--share=ipc",
+        "--device=dri",
+        "--socket=pulseaudio",
+        "--filesystem=host"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://www.lernsoftware-filius.de/downloads/Setup/filius-2.13.0.zip",
-          "sha256": "396db29ae7bc36688e0613e9361a51b5104942bfe3be22453acf508d7691b8d2",
-          "strip-components": 0
+            "name": "openjdk",
+            "buildsystem": "simple",
+            "build-commands": [
+                "/usr/lib/sdk/openjdk21/install.sh"
+            ]
+        },
+        {
+            "name": "filius",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/filius",
+                "cp -r * /app/filius",
+                "chmod +x /app/filius/filius.sh"
+            ],
+            "post-install": [
+                "install -Dm755 filius /app/bin/de.lernsoftware_filius.Filius",
+                "install -Dm644 de.lernsoftware_filius.Filius.desktop -t /app/share/applications/",
+                "install -Dm644 de.lernsoftware_filius.Filius.appdata.xml -t /app/share/metainfo/",
+                "install -Dm644 filius.png -t /app/share/icons/hicolor/128x128/apps/"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.lernsoftware-filius.de/downloads/Setup/filius-2.13.0.zip",
+                    "sha256": "396db29ae7bc36688e0613e9361a51b5104942bfe3be22453acf508d7691b8d2",
+                    "strip-components": 0
+                },
+                {
+                    "type": "file",
+                    "path": "filius"
+                },
+                {
+                    "type": "file",
+                    "path": "de.lernsoftware_filius.Filius.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "de.lernsoftware_filius.Filius.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "img/filius.png"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "filius-icon",
-      "buildsystem": "simple",
-      "build-commands": [
-        "for size in 16 32 64 128; do install -Dm644 filius${size}.png /app/share/icons/hicolor/${size}x${size}/apps/de.lernsoftware_filius.Filius.png; done"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "path": "img/filius128.png"
-        },
-        {
-          "type": "file",
-          "path": "img/filius64.png"
-        },
-        {
-          "type": "file",
-          "path": "img/filius64.png"
-        },
-        {
-          "type": "file",
-          "path": "img/filius32.png"
-        },
-        {
-          "type": "file",
-          "path": "img/filius16.png"
-        }
-      ]
-    },
-    {
-      "name": "filius-startup",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -Dm755 filius /app/bin/de.lernsoftware_filius.Filius",
-        "install -Dm644 de.lernsoftware_filius.Filius.desktop /app/share/applications/de.lernsoftware_filius.Filius.desktop",
-        "install -Dm644 de.lernsoftware_filius.Filius.appdata.xml /app/share/metainfo/de.lernsoftware_filius.Filius.appdata.xml"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "path": "filius"
-        },
-        {
-          "type": "file",
-          "path": "de.lernsoftware_filius.Filius.desktop"
-        },
-        {
-          "type": "file",
-          "path": "de.lernsoftware_filius.Filius.appdata.xml"
-        }
-      ]
-    }
-  ]
+    ]
 }
