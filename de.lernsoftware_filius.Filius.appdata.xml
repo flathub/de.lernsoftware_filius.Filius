@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>de.lernsoftware_filius.Filius</id>
   <name>Filius</name>
-  <developer_name>Stefan Freischlad</developer_name>
+  <developer id="de.lernsoftware_filius">
+    <name>Stefan Freischlad</name>
+  </developer>
   <summary>Filius is a network simulator for educational purpose</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
@@ -27,10 +29,6 @@
         https://raw.githubusercontent.com/mikebarkmin/flathub/de.lernsoftware_filius.filius/img/03.png</image>
     </screenshot>
   </screenshots>
-  <categories>
-    <category>Development</category>
-    <category>Education</category>
-  </categories>
   <kudos>
     <kudo>HiDpiIcon</kudo>
   </kudos>
